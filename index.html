@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine T | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>DIVINE T</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1 class="typing">Hello, I'm <span>Divine T</span></h1>
+            
+            <h2>Frontend Developer & Creative Designer</h2>
+            <p>
+                
+                I create modern websites, digital designs and creative
+                marketing experiences.
+            </p>
+
+            <a href="#projects" class="btn auto-typing-btn" data-text="View My Work">View My Work</a>
+        </div>
+
+        <div class="profile">
+            <img src="login simmlatar/ChatGPT Image Sep 4, 2026, 10_48_18 AM.png">
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am Divine T, a creative developer and designer interested
+            in frontend development, UI/UX design and digital marketing.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="cards">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>UI/UX Design</div>
+            <div>Canva</div>
+            <div>Digital Marketing</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="cards">
+            <div class="project">
+                <h3>Smart Email Assistant</h3>
+                <p>Email application design project.</p>
+            </div>
+
+            <div class="project">
+                <h3>Edgars Clothing Campaign</h3>
+                <p>Digital advertising and clothing campaign.</p>
+            </div>
+
+            <div class="project">
+                <h3>Victoria Falls Distilling Co.</h3>
+                <p>Branding and digital marketing project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>0785707678.</p>
+        <a href="mailto:divinethabanincube@gmail.com" class="btn">Contact Me</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Divine T. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const typingButton = document.querySelector('.auto-typing-btn');
+
+        if (typingButton) {
+            const fullText = typingButton.dataset.text || typingButton.textContent.trim();
+            let index = 0;
+            let deleting = false;
+
+            function typeLoop() {
+                typingButton.textContent = fullText.slice(0, index);
+
+                if (!deleting && index < fullText.length) {
+                    index++;
+                    setTimeout(typeLoop, 120);
+                } else if (!deleting && index === fullText.length) {
+                    deleting = true;
+                    setTimeout(typeLoop, 1200);
+                } else if (deleting && index > 0) {
+                    index--;
+                    setTimeout(typeLoop, 80);
+                } else {
+                    deleting = false;
+                    setTimeout(typeLoop, 500);
+                }
+            }
+
+            typeLoop();
+        }
+    </script>
+
+</body>
+</html>
+
